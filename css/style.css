@@ -1,5 +1,6 @@
 html{
     scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
 }
 body{
 	margin: 20px;
@@ -7,30 +8,61 @@ body{
 }
 
 header{
-	display: flex;
-  	background: #777777;
-  	justify-content: space-around;
-  	border: 2px solid blue;
+grid-template-columns: 50px auto 50px;
+display: grid;
+
 }
 
+#index_head{
+	grid-column: 2 / span 1;
+	background-color: #333333;
+  background-image: url('../images/flannel.jpg');
+  background-attachment: fixed;      
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-size: cover;       
+  color: white;
+  text-shadow: 2px 2px 2px #000000;
+  height: 350px;
+
+}
+
+.navbar{
+	display: flex;
+  	background: #454545;
+  	justify-content: space-around;
+  	flex-direction: column;
+  	align-items: center;
+  	font-size: 20px;
+  	padding: 10px;
+  	border: 3px solid black;
+}
+
+.navbar > li{
+	padding: 5px;
+}
 
 h1{
-	font-size: 60px;
+	font-size: 54px;
 	text-align: center;
 	text-transform: uppercase;
+	padding: 10px;
+	grid-column: 2 / span 1;
 }
 
 h2{
 	font-size: 40px;
+	padding-bottom: 15px;
 
 }
 h3{
 	font-size: 25px;
+	padding-top: 15px;
 }
 
 p{
 	font-size: 18px;
-	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 img{
@@ -44,14 +76,89 @@ div{
 	padding: 25px;
 }
 ul{
-	margin: 20px;
+	padding-top: 10px;
+	padding-bottom: 2
 }
-.navbar{
-	flex-direction: row;
-	justify-content: space-between;
-	background-color: #444444;
+
+.work_title{
+	font-size:20px;
+	list-style-type:none
+}
+.navbar a {
+  color: #FFFFFF;
+}
+
+.navbar a:hover{
+	color: blue;
+}
+
+.navbar .current{
+	color: #55F1FF;
+}
+
+#resume{
+	display: grid;
+	grid-template-columns: 1fr;
+}
+#education{
+	grid-row: 1 / span 1;
+	grid-column: 1 / span 1;
+}
+#courses{
+	grid-row: 2 / span 1;
+	grid-column: 1/ span 1;
+}
+#computer{
+	grid-row: 3 / span 1;
+	grid-column: 1/ span 1;
+}
+#experience{
+	grid-row: 1 / span 3;
+	grid-column: 2 / span 1;
+}
+
+a.skip{
+  background: white;
+  padding: 5px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+a.skip:focus{
+  top:10px;
+  color: black;
+  text-decoration-style: solid;
 }
 @media all and (min-width: 800px){
 
+.navbar{
+  	flex-direction: row;
+ }
+
+#resume{
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
 
 }
+#education{
+	grid-row: 1 / span 1;
+	grid-column: 1 / span 1;
+}
+#courses{
+	grid-row: 2 / span 1;
+	grid-column: 1/ span 1;
+}
+#computer{
+	grid-row: 3 / span 1;
+	grid-column: 1/ span 1;
+}
+#experience{
+	grid-row: 1 / span 3;
+	grid-column: 2 / span 1;
+}
+
+}
+

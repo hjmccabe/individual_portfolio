@@ -5,24 +5,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/html5reset.css">
 	<link rel='stylesheet' type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 	<title>Resume</title>
 </head>
 <body>
-<header>
 	<nav>
 		<ul class = 'navbar'>
 			<li> <a href = index.html>About Me</a> </li>
 			<li> <a href = ovie.html>Ovie</a> </li>
-			<li> <a href = resume.html>Resume</a> </li>
+			<li> <a class = "current" href = resume.html>Resume</a> </li>
 			<li> <a href = interests.html>Interests</a> </li>
 			<li> <a href = contact.html>Contact</a> </li>
 		</ul>
 	</nav>
-</header>
-<main>
-	<div class="skip"><a href="#main">Skip to Main Content</a></div>
-	
+	<a class = "skip" href="#main">Skip to Main Content</a>
+<header>
 	<h1>Resume</h1>
+</header>
+<main id = 'skip'>
+
+<div id = 'resume'>
 
 	<div id = 'education'>
 
@@ -35,6 +37,7 @@
 		<li>Minor in Statistics </li>		     	      	     
 		<li> Recipient of Provost Scholarship </li>
 		<li> Major GPA: 4.00 </li>
+		<li> Overall GPA: 3.41 </li>
 	</ul>
 	</div>
 
@@ -74,7 +77,7 @@
 	</ul>
 </div>
 
-<div id = 'experience'>
+	<div id = 'experience'>
 	<h2>Experience</h2>
 
 	<h3>Data Oriented Programming</h3>
@@ -123,6 +126,7 @@
 		<li>Collected and analyzed stakeholder data</li>
 		<li>Attended conferences and reported results to management</li>
 	</ul>
+</div>
 </div>
 
 	<footer>
