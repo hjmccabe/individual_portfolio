@@ -196,6 +196,8 @@ a.skip:focus{
   color: black;
   text-decoration-style: solid;
 }
+
+
 @media all and (min-width: 800px){
 
 .navbar{
@@ -251,7 +253,7 @@ form{
   	 animation-duration: 0s;
 }
 
-  .skip a{
+  a.skip{
     -webkit-transition: none;
     transition: none;
   }
