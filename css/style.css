@@ -5,6 +5,7 @@ html{
 body{
 	margin: 20px;
  	padding: 10px;
+ 	background-color: #ebfff8;
 }
 
 header{
@@ -52,16 +53,16 @@ h1{
 
 h2{
 	font-size: 40px;
-	padding-bottom: 15px;
+	padding-top: 20px;
 
 }
 h3{
 	font-size: 25px;
-	padding-top: 15px;
+	padding-top: 20px;
 }
 
 p{
-	font-size: 18px;
+	font-size: 20px;
 	padding-bottom: 10px;
 }
 
@@ -79,6 +80,44 @@ ul{
 	padding-top: 10px;
 	padding-bottom: 2
 }
+
+li{
+	font-size: 18px;
+}
+
+@keyframes show_name{
+
+	from{
+		font-size: 	1em;
+	}
+
+	to{
+		font-size: 4em;
+	}
+}
+
+.hit-the-floor {
+  color: #fff;
+  font-size: 4em;
+  animation-name: show_name;
+  animation-duration: 2s;
+  font-weight: bold;
+  font-family: Helvetica;
+  text-shadow: 
+    0 1px 0 #aaa, 
+    0 2px 0 #a7a7a7, 
+    0 3px 0 #999, 
+    0 4px 0 #979797, 
+    0 5px 0 #888, 
+    0 6px 1px rgba(0,0,0,.1), 
+    0 0 5px rgba(0,0,0,.1), 
+    0 1px 3px rgba(0,0,0,.3), 
+    0 3px 5px rgba(0,0,0,.2), 
+    0 5px 10px rgba(0,0,0,.25), 
+    0 10px 10px rgba(0,0,0,.2), 
+    0 20px 20px rgba(0,0,0,.15);
+}
+
 
 .work_title{
 	font-size:20px;
@@ -99,22 +138,36 @@ ul{
 #resume{
 	display: grid;
 	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1.5fr 3fr;
 }
 #education{
 	grid-row: 1 / span 1;
 	grid-column: 1 / span 1;
+	align-items: center;
+	justify-content: center;
 }
 #courses{
 	grid-row: 2 / span 1;
 	grid-column: 1/ span 1;
+	align-items: center;
+	justify-content: center;
 }
 #computer{
 	grid-row: 3 / span 1;
 	grid-column: 1/ span 1;
+	align-items: center;
+	justify-content: center;
 }
 #experience{
-	grid-row: 1 / span 3;
-	grid-column: 2 / span 1;
+	grid-row: 4 / span 1;
+	grid-column: 1 / span 1;
+	align-items: center;
+	justify-content: center;
+}
+
+#interests{
+	grid-template-columns: 1fr;
+	display: grid;
 }
 
 #gallery{
@@ -171,5 +224,36 @@ a.skip:focus{
 	grid-column: 2 / span 1;
 }
 
+#interests{
+	grid-template-columns: 1fr 1fr;
 }
 
+#prof_interests{
+	grid-column: 1 / span 1;
+}
+
+#personal_interests{
+	grid-column: 2/ span 1;
+}
+
+form{
+	margin: 25px;
+	font-size: 20px;
+}
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+
+.hit-the-floor {	
+	color: white;
+  	text-shadow: 2px 2px 2px #000000;
+  	height: 350px;
+  	 animation-duration: 0s;
+}
+
+  .skip a{
+    -webkit-transition: none;
+    transition: none;
+  }
+
+}
